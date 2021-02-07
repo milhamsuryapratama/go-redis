@@ -38,6 +38,10 @@ func main() {
 	}
 
 	err = json.Unmarshal([]byte(val), &p)
+	if err != nil {
+		panic(err)
+	}
+
 	fmt.Println(p)
 }
 
