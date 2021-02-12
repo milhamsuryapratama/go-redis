@@ -1,16 +1,15 @@
-package main
+package pubsub
 
 import (
 	"fmt"
-	pubsub2 "go-redis/pubsub"
 )
 
-func main() {
-	pubsub := pubsub2.Subscribe()
+func Pubsub() {
+	pubsub := Subscribe()
 
 	ch := pubsub.Channel()
 
-	err := pubsub2.Publish()
+	err := Publish()
 	if err != nil {
 		panic(err)
 	}
